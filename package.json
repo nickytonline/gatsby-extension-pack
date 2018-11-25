@@ -1,17 +1,49 @@
 {
-    "name": "gatsby-extension-pack",
-    "displayName": "Gatsby Extension Pack",
-    "description": "Useful extensions for GatsbyJS",
-    "version": "1.0.0",
-    "publisher": "nickytonline",
-    "engines": {
-        "vscode": "^1.29.0"
-    },
-    "categories": [
-        "Extension Packs"
+  "name": "gatsby-extension-pack",
+  "displayName": "Gatsby Extension Pack",
+  "description": "Useful extensions for GatsbyJS",
+  "version": "1.0.1",
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.json": [
+      "prettier --write",
+      "git add"
     ],
-    "extensionDependencies": [
-        "nickytonline.vscode-gatsby-snippets",
-        "Prisma.vscode-graphql"
+    "*.md": [
+      "prettier --write",
+      "git add"
     ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 80
+  },
+  "author": {
+    "email": "nick@iamdeveloper.com",
+    "name": "Nick Taylor",
+    "url": "https://iamdeveloper.com"
+  },
+  "publisher": "nickytonline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickytonline/gatsby-extension-pack.git"
+  },
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionDependencies": [
+    "nickytonline.vscode-gatsby-snippets",
+    "Prisma.vscode-graphql"
+  ],
+  "devDependencies": {
+    "husky": "0.14.3",
+    "lint-staged": "7.2.0",
+    "prettier": "1.14.2"
+  }
 }
