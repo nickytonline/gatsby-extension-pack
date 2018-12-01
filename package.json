@@ -2,7 +2,7 @@
   "name": "gatsby-extension-pack",
   "displayName": "Gatsby Extension Pack",
   "description": "Useful extensions for GatsbyJS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "precommit": "lint-staged"
   },
@@ -40,7 +40,8 @@
   ],
   "extensionDependencies": [
     "nickytonline.vscode-gatsby-snippets",
-    "Prisma.vscode-graphql"
+    "Prisma.vscode-graphql",
+    "kumar-harsh.graphql-for-vscode"
   ],
   "devDependencies": {
     "husky": "0.14.3",
